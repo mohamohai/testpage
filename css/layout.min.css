@@ -1409,5 +1409,8 @@ fieldset[disabled] .btn-theme {
 	top: 100px !important;
 }
 
-
+.swiper-clients-img{
+    margin: 0;
+    padding: 0;
+}
   
