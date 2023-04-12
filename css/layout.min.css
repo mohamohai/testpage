@@ -1321,3 +1321,18 @@ fieldset[disabled] .btn-theme {
 .cardBorder{
 	border: 1px solid #e0e0e0;
 }
+.img-flow{
+	overflow: hidden;
+}
+
+.img-scale{
+	transition: all 0.2s;
+	
+}
+.img-scale:hover{
+	transform: scale(1.1);
+}
+
+.img-responsive{
+	filter: brightness(1) !important;
+}
