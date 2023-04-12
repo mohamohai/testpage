@@ -1362,14 +1362,6 @@ fieldset[disabled] .btn-theme {
 	margin-top: -30px;
   }
 
-
-
-
-  .mySwiper{
-
-}
-
-
 .partnerMoveAnimation{
 	transform: translate(0%);
 	animation: moveCompany 30s infinite linear;
@@ -1412,4 +1404,10 @@ fieldset[disabled] .btn-theme {
   }
 
 
+.bbb{
+	position: absolute !important;
+	top: 100px !important;
+}
 
+
+  
