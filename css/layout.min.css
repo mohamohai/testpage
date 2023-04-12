@@ -1336,3 +1336,78 @@ fieldset[disabled] .btn-theme {
 .img-responsive{
 	filter: brightness(1) !important;
 }
+
+
+.timeline {
+	position: relative;
+  }
+
+  .card {
+	background-color: #ffffff;
+	padding: 1em;
+	margin-bottom: 1em;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+	width: 40%;
+  }
+
+  .card:nth-child(odd) {
+	margin-left: 0;
+  }
+
+  .card:nth-child(even) {
+	margin-left: 50%;
+  }
+
+  .card:nth-child(n+2) {
+	margin-top: -30px;
+  }
+
+
+
+
+
+.mySwiper{
+
+	filter: grayscale(100%);
+}
+
+
+.partnerMoveAnimation{
+	transform: translate(0%);
+	animation: moveCompany 20s infinite linear;
+	overflow: visible !important;
+} 
+@keyframes moveCompany{
+	0%{
+		transform: translateX(0%)
+	}50%{
+		transform: translateX(50%)
+	}
+	100%{
+		transform: translateX(100%)
+	}
+
+	/* to{
+		transform: translateX(0%)
+	}form{
+		transform: translateX(100%)
+	} */
+}
+
+  /* 화면 너비가 768px 미만일 때 */
+  @media (max-width: 767px) {
+	.card {
+	  width: 100%;
+	}
+
+	.card:nth-child(even) {
+	  margin-left: 0;
+	}
+
+	.card:nth-child(n+2) {
+	  margin-top: 0;
+	}
+  }
+
+
+
