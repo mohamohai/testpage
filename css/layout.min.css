@@ -1365,16 +1365,16 @@ fieldset[disabled] .btn-theme {
 
 
 
-
-.mySwiper{
+  .mySwiper{
 
 	filter: grayscale(100%);
 }
 
 
+
 .partnerMoveAnimation{
 	transform: translate(0%);
-	animation: moveCompany 20s infinite linear;
+	animation: moveCompany 30s infinite linear;
 	overflow: visible !important;
 } 
 @keyframes moveCompany{

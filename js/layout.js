@@ -11,7 +11,7 @@ var Layout = function () {
         ) ? true : false);
     }
 
-    // handle on page scroll 
+    // handle on page scroll
     var handleHeaderOnScroll = function() {
         if ($(window).scrollTop() > 60) {
             $("body").addClass("page-on-scroll");
