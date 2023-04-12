@@ -1366,7 +1366,7 @@ fieldset[disabled] .btn-theme {
 
 
   .mySwiper{
-	
+
 }
 
 
@@ -1374,7 +1374,11 @@ fieldset[disabled] .btn-theme {
 	transform: translate(0%);
 	animation: moveCompany 30s infinite linear;
 	overflow: visible !important;
-} 
+}
+
+.partnerMoveAnimation:hover{
+	animation-play-state: paused;
+}
 @keyframes moveCompany{
 	0%{
 		transform: translateX(0%)
