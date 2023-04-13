@@ -1547,3 +1547,8 @@ fieldset[disabled] .btn-theme {
 .partner:hover {
   animation-play-state: paused;
 }
+
+
+.mapimg{
+  width: 100%;
+}
