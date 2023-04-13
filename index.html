@@ -16,9 +16,54 @@
     <link href="css/animate.css" rel="stylesheet">
     <link href="vendor/swiper/css/swiper.min.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" href="favicon.ico" />
+
     <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
 </head>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // 슬라이드에 따른 설명 텍스트를 배열로 정의합니다.
+       
+        var slideName = [
+            '서비스 이름1',
+            '서비스 이름2',
+            '서비스 이름3'
+        ];
+
+       
+        var slideDescriptions = [
+            '첫 번째 슬라이드의 설명입니다.',
+            '두 번째 슬라이드의 설명입니다.',
+            '세 번째 슬라이드의 설명입니다.'
+        ];
+      
+
+        var swiper = new Swiper('.swiper-container', {
+
+            
+            direction: 'horizontal',
+            slidesPerView: 1,
+            mousewheel: true, 
+            keyboard: true,
+ 
+            // 슬라이드가 변경될 때마다 실행되는 콜백 함수를 정의합니다.
+            on: {
+                slideChange: function () {
+                    var index = this.activeIndex; 
+                    var serviceName = document.getElementById('serviceName');
+                    var description = document.getElementById('serviceEx'); // 설명 텍스트 요소를 가져옵니다.
+                    serviceName.textContent = slideName[index];
+                    description.textContent = slideDescriptions[index]; // 설명 텍스트를 변경합니다.
+                },
+            },
+        });
+
+        // 초기 텍스트를 설정합니다.
+        document.getElementById('serviceName').textContent = slideDescriptions[swiper.activeIndex];
+        document.getElementById('serviceEx').textContent = slideDescriptions[swiper.activeIndex];
+    });
+</script>
 
 <body id="body" data-spy="scroll" data-target=".header" style="overflow: hidden;">
 
@@ -176,10 +221,6 @@
                         <!-- Accordion -->
                         <div class="accordion">
                             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-
-
-
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingOne">
                                         <h4 class="panel-title">
@@ -215,11 +256,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingThree">
                                         <h4 class="panel-title">
@@ -237,8 +273,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="headingFour">
                                         <h4 class="panel-title">
@@ -256,11 +290,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
                         </div>
                         <!-- End Accodrion -->
@@ -301,7 +330,7 @@
                         <img class="img-responsive img-scale" src="img/970x647/02.jpg" alt="Latest Products Image">
                     </div>
                     <h4><a href="#">DISTRIBUTION</a> <span class="text-uppercase margin-l-20">ex</span></h4>
-                    <p>싱가포르 전문 수출,<br>쇼핑몰 창업 </p> 
+                    <p>싱가포르 전문 수출,<br>쇼핑몰 창업 </p>
                     <a class="link" href="#">Details</a>
                 </div>
                 <!-- End Latest Products -->
@@ -332,31 +361,64 @@
             <div class="container service-Card">
                 <div class="service-Card-min">
                     <div>
-                    <img class="img-responsive service-Cardimg" src="img/logo/pa4.png" alt="Latest Products Image">
-                    </div> 
-                   <hr> 
-                   <h3>DEVAMOND</h3>
-                   <p>해외의 개발자 인재 파견 서비스입니다.<br>해외의 개발자들을 국내 기업과 매칭해주는~~ </p>
+                        <img class="img-responsive service-Cardimg" src="img/logo/pa4.png" alt="Latest Products Image">
+                    </div>
+                    <hr>
+                    <h3>DEVAMOND</h3>
+                    <p>해외의 개발자 인재 파견 서비스입니다.<br>해외의 개발자들을 국내 기업과 매칭해주는~~사이트입니다 </p>
                 </div>
                 <div class="service-Card-min">
                     <div>
-                    <img class="img-responsive service-Cardimg" src="img/logo/pa7.png" alt="Latest Products Image">
-                </div>
-                   <hr>
-                   <h3>VROZ</h3>
+                        <img class="img-responsive service-Cardimg" src="img/logo/pa7.png" alt="Latest Products Image">
+                    </div>
+                    <hr>
+                    <h3>VROZ</h3>
                     <p>VROZ 관련으로 적을 내용입니ㅏㄷ. </p>
                 </div>
                 <div class="service-Card-min">
                     <div>
-                    <img class="img-responsive service-Cardimg" src="img/logo/pa8.png" alt="Latest Products Image">
-                </div> 
+                        <img class="img-responsive service-Cardimg" src="img/logo/pa8.png" alt="Latest Products Image">
+                    </div>
                     <hr>
                     <h3>SeoulBroz</h3>
                     <p>유통업 관련해서 적을 내용입니다. </p>
-                </div> 
+                </div>
             </div>
- 
-         
+
+
+            <!--// end row -->
+        </div>
+    </div>
+
+
+    <div id="products">
+        <div class="content-lg container">
+            <div>
+                <h1>VROZ</h1>
+                <p>버튜버를 위한 올인원 플랫폼 <br>버튜버를 전문 웹진부터 다양한 굿즈를 만나볼 수 있는 쇼핑몰까지
+                </p>
+                <div class="description">
+                    <h5 id ="serviceName"></h5>
+                    <p id="serviceEx"></p>
+                </div>
+            </div>
+            <!--// end row -->
+        
+            <div class="swiper-container">
+             
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide project-slide">
+                        <img src="img/500x500/01.jpg" class="sliderimg">
+                    </div>
+                    <div class="swiper-slide project-slide">
+                        <img src="img/500x500/02.jpg" class="sliderimg">
+                    </div>
+                    <div class="swiper-slide project-slide">
+                        <img src="img/500x500/03.jpg" class="sliderimg">
+                    </div>
+                </div>
+            </div>
+
             <!--// end row -->
         </div>
     </div>
@@ -1021,351 +1083,7 @@ End Pricing -->
             <div class="swiper-slide">
                 <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
             </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa6.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa2.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa3.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa1.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa5.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa4.png" alt="Clients Logo">
-            </div>
-            <div class="swiper-slide">
-                <img class="swiper-clients-img" src="img/logo/pa7.png" alt="Clients Logo">
-            </div>
+
         </div>
         <!-- End Swiper Wrapper -->
     </div>
@@ -1611,6 +1329,8 @@ End Pricing -->
     <script src="js/components/wow.min.js" type="text/javascript"></script>
     <script src="js/components/swiper.min.js" type="text/javascript"></script>
     <script src="js/components/masonry.min.js" type="text/javascript"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
 </body>
 <!-- END BODY -->
