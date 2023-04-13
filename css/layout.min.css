@@ -434,6 +434,7 @@ fieldset[disabled] .btn-theme {
 }
 .work .work-popup-content-divider {
   border-right: 1px solid #cdcecf;
+  /* 모달창 우측선 */
 }
 @media (max-width: 768px) {
   .work .work-popup-content {
