@@ -1328,7 +1328,6 @@ fieldset[disabled] .btn-theme {
 .timeline {
   position: relative;
   overflow: visible;
-  height: 2000px; 
 }
 
 .card {
