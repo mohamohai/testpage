@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         mousewheel: true,
         keyboard: true,
         autoplay : true, 
-        loop:true, 
         // 슬라이드가 변경될 때마다 실행되는 콜백 함수를 정의합니다.
         on: {
             slideChange: function () {
