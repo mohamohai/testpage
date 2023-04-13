@@ -1337,8 +1337,7 @@ fieldset[disabled] .btn-theme {
   margin-bottom: 1em;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 40%;
-  position: sticky;
-  top: 100px;
+ 
 }
 
 .card:nth-child(odd) {
