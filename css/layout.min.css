@@ -1446,9 +1446,15 @@ fieldset[disabled] .btn-theme {
   margin: 0px 30px;
   border: 15px;
   box-shadow: 0px 1px 3px #e0e0e0;
+  transition: all 0.2s;
 }
 .service-Card-min hr {
   width: 90%;
+}
+.service-Card-min:hover{
+    transform: translateY(-10px);
+    transition: all 0.2s;
+    box-shadow: 0px 3px 6px #e0e0e0;
 }
 @media (max-width: 768px) {
   .service-Card {
@@ -1488,6 +1494,7 @@ fieldset[disabled] .btn-theme {
     height: 600px !important;  
     overflow: hidden; 
 } 
+
 
 .sliderimg{
     width: 50%;
