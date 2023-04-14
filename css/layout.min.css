@@ -1329,13 +1329,7 @@ fieldset[disabled] .btn-theme {
   filter: brightness(1) !important;
 }
 
-.timeline {
-  position: relative;
-  overflow: visible;
-  position: sticky;
-}
-
-.card {
+.card { 
   background-color: #ffffff;
   padding: 1em;
   margin-bottom: 1em;
@@ -1611,32 +1605,9 @@ fieldset[disabled] .btn-theme {
  
 } 
 
-.yearfilter{
-  border-left: solid 1px red; 
-}
-
-.HistoryFrame div:nth-child(1){
-  text-align: right;
-}
-.oh{
-  height: auto;
-}
-
-.nostyle ul{
-  list-style: none; 
-}
-.HistoryFrameLeft{
-  border-right: solid 1px red ;
-}
-
-.ccc{
-  height: auto;
-  border-right: solid 1px red ;
-}
-
-  
 
 
+ 
 .HistoryFrame div{
   color:red; 
 }
@@ -1726,3 +1697,24 @@ footer li{
 .service:hover h3{
   color: white;
 }   
+
+
+.NewsletterForm{
+
+}
+.NewsletterForm div input{
+  width: 100%; 
+  margin: 10px 0;
+ padding: 10px; 
+ border-radius: 5px;  
+ border: 1px solid #e0e0e0;
+}
+
+.NewsletterForm div textarea{ 
+  width: 100%; 
+  margin: 10px 0;
+ padding: 10px; 
+ border-radius: 5px;  
+ border: 1px solid #e0e0e0;
+ height: 100px; 
+}
