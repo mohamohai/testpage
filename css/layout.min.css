@@ -1522,10 +1522,11 @@ fieldset[disabled] .btn-theme {
   overflow: visible !important;
 }
 .partner img{
-  width: 150px;
+  width: 200px;  
   height: 100px;   
   margin-right: 50px;   
   pointer-events: none; 
+  object-fit: cover; 
 }
 
 
