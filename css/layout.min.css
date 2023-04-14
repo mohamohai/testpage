@@ -1450,10 +1450,6 @@ fieldset[disabled] .btn-theme {
     height: 400px;
     margin-bottom: 30px;
   }
-  .lanSize{
-    color: blue;
-  }
-
   .card {
     width: 100%;
   }
@@ -1465,6 +1461,9 @@ fieldset[disabled] .btn-theme {
   .card:nth-child(n + 2) {
     margin-top: 0;
   }
+  .lanSize{
+    color: #515769 !important;  
+  } 
 }
 
 .service-Cardimg {
