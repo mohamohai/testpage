@@ -1524,9 +1524,6 @@ fieldset[disabled] .btn-theme {
     
 }
 
-.description{
-    
-} 
 
 
 .partner{
@@ -1537,12 +1534,22 @@ fieldset[disabled] .btn-theme {
 }
 .partner img{
   width: 150px;
-  height: 100px;  
+  height: 100px;   
   margin-right: 50px;   
+  pointer-events: none; 
 }
 
 
-
+.Portfolio{
+  overflow: hidden; 
+}
+.Portfolio img{
+  transition: all 0.2s; 
+}
+.Portfolio img:hover{
+  transition: all 0.2s; 
+  transform: scale(1.1);
+}
 
 .partner:hover {
   animation-play-state: paused;
