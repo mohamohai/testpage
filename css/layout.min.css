@@ -1,3 +1,7 @@
+html{
+	scroll-behavior: smooth;
+}
+ 
 .link,
 body {
   position: relative;
@@ -1435,36 +1439,7 @@ fieldset[disabled] .btn-theme {
     transition: all 0.2s;
     box-shadow: 0px 3px 6px #e0e0e0;
 }
-@media (max-width: 768px) {
-  .service-Card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-     
-  .service-Card-min {
-    width: 100%;
-    height: 400px;
-    margin-bottom: 30px;
-  }
-  .card {
-    width: 100%;
-  }
 
-  .card:nth-child(even) {
-    margin-left: 0;
-  }
-
-  .card:nth-child(n + 2) {
-    margin-top: 0;
-  }
-  .lanSize{
-    color: #515769 !important;  
-  } 
-}
 
 .service-Cardimg {
   width: 100%;
@@ -1566,4 +1541,95 @@ fieldset[disabled] .btn-theme {
   
   align-items: center;
 
+}
+
+
+.HistoryYear{
+  border-bottom: 1px solid #e0e0e0;
+  padding:20px 0 40px 0;  
+}  
+.HistoryYear ul{
+  list-style: none;
+  padding: 0px; 
+}
+
+.HistoryYear ul li{
+  margin-bottom: 10px; 
+}
+@media (max-width: 768px) {
+  .service-Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+     
+  .service-Card-min {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 30px;
+  }
+  .card {
+    width: 100%;
+  }
+
+  .card:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .card:nth-child(n + 2) {
+    margin-top: 0;
+  }
+  .lanSize{
+    color: #515769 !important;  
+  } 
+}
+
+
+.dash ul{
+  list-style: none;
+  padding: none;
+}    
+ 
+.dash ul li div:nth-child(1){
+ 
+  text-align: right; 
+ 
+} 
+ 
+.yearfilter ul { 
+  margin-bottom: 15px;
+}
+ 
+.yearfilter ul li{  
+  margin-bottom: 15px;
+}
+
+.textcheck{
+ 
+} 
+
+.yearfilter{
+  border-left: solid 1px red; 
+}
+
+.HistoryFrame div:nth-child(1){
+  text-align: right;
+}
+.oh{
+  height: auto;
+}
+
+.nostyle ul{
+  list-style: none; 
+}
+.HistoryFrameLeft{
+  border-right: solid 1px red ;
+}
+
+.ccc{
+  height: auto;
+  border-right: solid 1px red ;
 }
