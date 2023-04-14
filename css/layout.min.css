@@ -172,7 +172,7 @@ h4 {
   text-shadow: none;
 }
 .section-seperator {
-  border-bottom: 1px solid #edf0f2;
+  
 }
 .content-wrapper-link {
   position: absolute;
@@ -1522,11 +1522,9 @@ fieldset[disabled] .btn-theme {
   overflow: visible !important;
 }
 .partner img{
-  width: 200px;  
-  height: 100px;   
-  margin-right: 50px;   
+  width: 250px;  
+  margin-right: 50px;    
   pointer-events: none; 
-  object-fit: cover; 
 }
 
 
@@ -1553,4 +1551,19 @@ fieldset[disabled] .btn-theme {
 
 .navbar{
   border-radius: 0px !important; 
+}
+.footerul{
+  margin-bottom: 100px; 
+}
+.footerul ul{
+  list-style: none; 
+  padding: 0px;
+}
+
+.ProjectImgBox{
+  height: 200px; 
+  display: flex;
+  
+  align-items: center;
+
 }
