@@ -158,7 +158,7 @@ h4 {
 }
 ::selection {
   color: #fff;
-  background: #fff;
+  background:  #fd871f; 
   text-shadow: none;
 }
 ::-webkit-selection {
